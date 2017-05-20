@@ -1,10 +1,10 @@
 #!/bin/bash
 #
 #**********************************************************************************************
-# Title: rsync_home_to_core_750.sh
-# Description: copy files from sebastian to external hard drive core_750
+# Title: rsync_home_to_wd_2000.sh
+# Description: copy files from users dir to external hard drive wd_2000
 # Author: Sebastian Sonntag
-# Date: 2016-08-22
+# Date: 2017-05-20
 # License:
 #**********************************************************************************************
 
@@ -16,11 +16,11 @@ echo "     /Volumes/Transcend/"
 echo ""
 
 
-rsync --stats -h -a -H -x -P --update --delete --exclude-from='/Users/sebastian/Library/Mobile Documents/com~apple~CloudDocs/System/Skripte/rsync_exclude_in_home.txt' /Users/sebastian/ /Volumes/core_750/sebastian/ # without backup
+rsync --stats -h -a -H -x -P --update --delete --exclude-from='/Users/sebastian/System/Apple/macOS/Skripte/rsync_exclude_in_home.txt' ~/ /Volumes/wd_2000/sebastians_backups/sebastian/ # without backup
 
-rsync --stats -h -a -H -x -P --update --delete ~/Library/Mobile\ Documents/com~apple~CloudDocs/ /Volumes/core_750/iCloud_Drive/ # without backup
+rsync --stats -h -a -H -x -P --update --delete ~/iCloud /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ # without backup
 
-rsync --stats -h -a -H -x -P --update --delete --exclude-from='/Users/sebastian/Library/Mobile Documents/com~apple~CloudDocs/System/Skripte/rsync_exclude_in_transcend.txt' /Volumes/Transcend/ /Volumes/core_750/transcend/ # without backups
+rsync --stats -h -a -H -x -P --update --delete --exclude-from='/Users/sebastian/System/Apple/macOS/Skripte/rsync_exclude_in_transcend.txt' /Volumes/Transcend/ /Volumes/wd_2000/sebastians_backups/transcend/ # without backups
 
 
 echo "--------------------------------------------------------------"
