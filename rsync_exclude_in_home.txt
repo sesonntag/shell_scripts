@@ -1,8 +1,10 @@
 .*
 Aktuelles*
+Dokumente*
 iCloud*
 Library
 Programmieren*
+Schreibtisch*
 Segeln*
 System*
 Uni*

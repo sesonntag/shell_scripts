@@ -18,7 +18,7 @@ echo ""
 
 rsync --stats -h -a -H -x -P --update --delete --exclude-from='/Users/sebastian/System/Apple/macOS/Skripte/rsync_exclude_in_home.txt' ~/ /Volumes/wd_2000/sebastians_backups/sebastian/ # without backup
 
-rsync --stats -h -a -H -x -P --update --delete ~/iCloud /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ # without backup
+rsync --stats -h -a -H -x -L -P --update --delete ~/iCloud /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ # without backup
 
 rsync --stats -h -a -H -x -P --update --delete --exclude-from='/Users/sebastian/System/Apple/macOS/Skripte/rsync_exclude_in_transcend.txt' /Volumes/Transcend/ /Volumes/wd_2000/sebastians_backups/transcend/ # without backups
 

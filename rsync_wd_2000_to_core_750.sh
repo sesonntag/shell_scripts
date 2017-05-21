@@ -1,53 +1,49 @@
 #!/bin/bash
 #
 #**********************************************************************************************
-# Title: rsync_from_core_750_to_wd_2000.sh
-# Description: copy files from external hard drive core_750 to wd_2000
+# Title: rsync_wd_2000_to_core_750.sh
+# Description: copy files from external hard drive wd_2000 to core_750
 # Author: Sebastian Sonntag
 # Date: 2016-08-24
 # License:
 #**********************************************************************************************
 
-
 ### rsync commands to rsync each directory incl. all subdirectories #
 echo "******************************************************************************"
 echo "Syncing now:"
-echo "     /Volumes/core_750/sebastian"
-echo "     /Volumes/core_750/iCloud_Drive"
-echo "     /Volumes/core_750/transcend"
-echo "     /Volumes/core_750/extern"
-
-
-echo ""
-echo "--------------------------------------------------------------"
-echo "path: /Volumes/core_750/sebastian"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/core_750/sebastian/ /Volumes/wd_2000/sebastians_backups/sebastian/
-echo "--------------------------------------------------------------"
-echo ""
+echo "     /Volumes/wd_2000/sebastian"
+echo "     /Volumes/wd_2000/iCloud_Drive"
+echo "     /Volumes/wd_2000/transcend"
+echo "     /Volumes/wd_2000/extern"
 
 echo ""
 echo "--------------------------------------------------------------"
-echo "path: /Volumes/core_750/icloud Drive"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/core_750/iCloud_Drive /Volumes/wd_2000/sebastians_backups/iCloud_Drive/
+echo "path: /Volumes/wd_2000/sebastians_backups/sebastian"
+rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/sebastian/ /Volumes/core_750/sebastian/
 echo "--------------------------------------------------------------"
 echo ""
 
 echo ""
 echo "--------------------------------------------------------------"
-echo "path: /Volumes/core_750/transcend"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/core_750/transcend/ /Volumes/wd_2000/sebastians_backups/transcend/
+echo "path: /Volumes/wd_2000/sebastians_backups/icloud Drive"
+rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/iCloud/ /Volumes/core_750/iCloud/
 echo "--------------------------------------------------------------"
 echo ""
 
+echo ""
+echo "--------------------------------------------------------------"
+echo "path: /Volumes/wd_2000/sebastians_backups/transcend"
+rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/transcend/ /Volumes/core_750/transcend/
+echo "--------------------------------------------------------------"
+echo ""
 
 echo ""
 echo ""
 echo "--------------------------------------------------------------"
-echo "path: /Volumes/core_750/extern"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/core_750/extern/ /Volumes/wd_2000/sebastians_backups/extern/
+echo "path: /Volumes/wd_2000/sebastians_backups/extern"
+rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/extern/ /Volumes/core_750/extern/
 echo "--------------------------------------------------------------"
 echo ""
-
 
 echo ""
 echo "--------------------------------------------------------------"
@@ -55,6 +51,7 @@ echo ""
 echo ""
 echo "Successful. All files have been synced correctly."
 echo "******************************************************************************"
+
 
 
 
