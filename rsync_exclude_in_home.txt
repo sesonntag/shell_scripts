@@ -1,5 +1,7 @@
 .*
 Aktuelles*
+Arbeit*
+Auto*
 Dokumente*
 iCloud*
 Library
