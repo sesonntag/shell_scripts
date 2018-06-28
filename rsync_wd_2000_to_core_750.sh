@@ -4,7 +4,7 @@
 # Title: rsync_wd_2000_to_core_750.sh
 # Description: copy files from external hard drive wd_2000 to core_750
 # Author: Sebastian Sonntag
-# Date: 2018-04-24
+# Date: 2018-05-15
 # License:
 #*******************************************************************************
 
@@ -14,6 +14,7 @@ echo "Syncing now:"
 echo "     /Volumes/wd_2000/sebastian"
 echo "     /Volumes/wd_2000/iCloud_Drive"
 echo "     /Volumes/wd_2000/extern"
+echo "     /Volumes/wd_2000/iMac"
 
 echo ""
 echo "--------------------------------------------------------------"
@@ -25,7 +26,7 @@ echo ""
 echo ""
 echo "--------------------------------------------------------------"
 echo "path: /Volumes/wd_2000/sebastians_backups/icloud Drive"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/iCloud/ /Volumes/core_750/iCloud/
+rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ /Volumes/core_750/iCloud_Drive/
 echo "--------------------------------------------------------------"
 echo ""
 
@@ -34,6 +35,14 @@ echo ""
 echo "--------------------------------------------------------------"
 echo "path: /Volumes/wd_2000/sebastians_backups/extern"
 rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/extern/ /Volumes/core_750/extern/
+echo "--------------------------------------------------------------"
+echo ""
+
+echo ""
+echo ""
+echo "--------------------------------------------------------------"
+echo "path: /Volumes/wd_2000/sebastians_backups/iMac"
+rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/iMac/ /Volumes/core_750/iMac/
 echo "--------------------------------------------------------------"
 echo ""
 
