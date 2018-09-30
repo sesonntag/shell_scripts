@@ -4,7 +4,7 @@
 # Title: rsync_wd_2000_to_core_750.sh
 # Description: copy files from external hard drive wd_2000 to core_750
 # Author: Sebastian Sonntag
-# Date: 2018-05-15
+# Date: 2018-09-30
 # License:
 #*******************************************************************************
 
@@ -19,14 +19,14 @@ echo "     /Volumes/wd_2000/iMac"
 echo ""
 echo "--------------------------------------------------------------"
 echo "path: /Volumes/wd_2000/sebastians_backups/sebastian"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/sebastian/ /Volumes/core_750/sebastian/
+rsync --stats -h -a -H -x --info=progress2 --update --delete /Volumes/wd_2000/sebastians_backups/sebastian/ /Volumes/core_750/sebastian/
 echo "--------------------------------------------------------------"
 echo ""
 
 echo ""
 echo "--------------------------------------------------------------"
 echo "path: /Volumes/wd_2000/sebastians_backups/icloud Drive"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ /Volumes/core_750/iCloud_Drive/
+rsync --stats --info=progress2i -h -a -H -x --update --delete /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ /Volumes/core_750/iCloud_Drive/
 echo "--------------------------------------------------------------"
 echo ""
 
@@ -34,7 +34,7 @@ echo ""
 echo ""
 echo "--------------------------------------------------------------"
 echo "path: /Volumes/wd_2000/sebastians_backups/extern"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/extern/ /Volumes/core_750/extern/
+rsync --stats -h -a -H --info=progress2 -x --update --delete /Volumes/wd_2000/sebastians_backups/extern/ /Volumes/core_750/extern/
 echo "--------------------------------------------------------------"
 echo ""
 
@@ -42,7 +42,7 @@ echo ""
 echo ""
 echo "--------------------------------------------------------------"
 echo "path: /Volumes/wd_2000/sebastians_backups/iMac"
-rsync --stats -h -a -H -x -P --update --delete /Volumes/wd_2000/sebastians_backups/iMac/ /Volumes/core_750/iMac/
+rsync --stats -h --info=progress2 -a -H -x --update --delete /Volumes/wd_2000/sebastians_backups/iMac/ /Volumes/core_750/iMac/
 echo "--------------------------------------------------------------"
 echo ""
 

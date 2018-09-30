@@ -4,7 +4,7 @@
 # Title: rsync_home_to_wd_2000.sh
 # Description: copy files from users dir to external hard drive wd_2000
 # Author: Sebastian Sonntag
-# Date: 2018-04-24
+# Date: 2018-09-30
 # License:
 #*******************************************************************************
 
@@ -15,9 +15,9 @@ echo "     /Volumes/iCloud Drive/"
 echo ""
 
 
-rsync --stats -h -a -H -x -P --update --delete --exclude-from='/Users/sebastiansonntag/System/Multiplattform/Skripte/rsync_exclude_in_home.txt' ~/ /Volumes/wd_2000/sebastians_backups/sebastian/ # without backup
+rsync --stats -h -a -H -x --info=progress2 --update --delete --exclude-from='/Users/sebastiansonntag/System/Multiplattform/Skripte/rsync_exclude_in_home.txt' ~/ /Volumes/wd_2000/sebastians_backups/sebastian/ # without backup
 
-rsync --stats -h -a -H -x -L -P --update --delete ~/iCloud /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ # without backup
+rsync --stats -h -a -H -x --info=progress2 -L -P --update --delete ~/iCloud /Volumes/wd_2000/sebastians_backups/iCloud_Drive/ # without backup
 
 
 echo "--------------------------------------------------------------"
