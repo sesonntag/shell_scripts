@@ -16,12 +16,12 @@ echo "     /volume1/homes/laura"
 echo ""
 echo "-------------------------------------------------------------------------"
 echo "task: sebastians home dir on synology"
-rsync -h -a -H -x -r -v --info=progress2 --update --delete -e ssh sebastian@192.168.1.47:/volume1/homes/sebastian /Volumes/wd2000/
+rsync -h -a -H -x -r -v --info=progress2 --update --delete -e ssh sebastian@192.168.1.47:/volume1/homes/sebastian /Volumes/wd2000/backups_synology_ds218/
 echo "-------------------------------------------------------------------------"
 echo ""
 echo "-------------------------------------------------------------------------"
 echo "task: lauras home dir on synology"
-rsync -h -a -H -x -r -v --info=progress2 --update --delete -e ssh sebastian@192.168.1.47:/volume1/homes/laura /Volumes/wd2000/
+rsync -h -a -H -x -r -v --info=progress2 --update --delete -e ssh sebastian@192.168.1.47:/volume1/homes/laura /Volumes/wd2000/backups_synology_ds218/
 echo "-------------------------------------------------------------------------"
 echo ""
 echo ""
