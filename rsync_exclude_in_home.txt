@@ -11,3 +11,4 @@ Schreibtisch*
 Segeln*
 System*
 Uni*
+zu_Extern*
