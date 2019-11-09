@@ -1,15 +1,4 @@
 .*
-Aktuelles*
-Arbeit*
-Dokumente*
-Filme*
-iCloud*
+Dokumente
 Library
-Motorrad*
-Programmieren*
-Schreibtisch*
-Segeln*
-SynologyDrive*
-System*
-Uni*
-zu_Extern*
+Schreibtisch

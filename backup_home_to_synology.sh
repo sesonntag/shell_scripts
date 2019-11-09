@@ -4,23 +4,13 @@
 # Title: backup_home_to_synology.sh
 # Description: copy files from users dir to Synology DiskStation NAS
 # Author: Sebastian Sonntag
-# Date: 2019-07-07
+# Date: 2019-09-06
 # License:
 #*******************************************************************************
 
 echo "*************************************************************************"
-echo "Syncing now:"
-echo "     sebastians home dir"
-echo "     iCloud Drive"
-echo ""
-echo "-------------------------------------------------------------------------"
-echo "task: sebastians home dir"
-rsync -h -a -H -x -r -v --info=progress2 --update --delete --exclude-from='/Users/sebastiansonntag/System/shell_scripts/rsync_exclude_in_home.txt' -e ssh ~/ sebastian@192.168.1.47:/volume1/homes/sebastian/backups/mac_book_pro/
-echo "-------------------------------------------------------------------------"
-echo ""
-echo "-------------------------------------------------------------------------"
-echo "task: sebastians icloud"
-rsync -h -a -H -x -r -v --info=progress2 -L --update --delete -e ssh ~/iCloud sebastian@192.168.1.47:/volume1/homes/sebastian/backups/icloud_drive/
+echo "Syncing now: Sebastians home dir"
+rsync -a -h -x -v --info=progress2 --delete --copy-links --exclude-from='/Users/sebastiansonntag/iCloud/System/shell_scripts/rsync_exclude_in_home.txt' -e ssh ~/ sebastian@192.168.1.47:/volume1/homes/sebastian/backups/mac_book_pro/
 echo "-------------------------------------------------------------------------"
 echo ""
 echo ""
