@@ -4,7 +4,7 @@
 # Title: rsync_synology_to_wd2000.sh
 # Description: backup files from Synology DiskStation to external hdd wd2000
 # Author: Sebastian Sonntag
-# Date: 2019-02-01
+# Date: 2020-03-18
 # License:
 #*******************************************************************************
 
@@ -16,12 +16,12 @@ echo "     /volume1/homes/laura"
 echo ""
 echo "-------------------------------------------------------------------------"
 echo "task: sebastians home dir on synology"
-rsync -h -a -H -x -r -v --info=progress2 --update --delete --exclude '@eaDir*' -e ssh sebastian@192.168.1.47:/volume1/homes/sebastian /Volumes/wd2000/backups_synology_ds218/
+rsync -h -a -H -x -r -v --info=progress2 --update --delete --exclude '@eaDir*' -e ssh admin@192.168.1.47:/volume1/homes/sebastian /Volumes/wd2000/backups_synology_ds218/
 echo "-------------------------------------------------------------------------"
 echo ""
 echo "-------------------------------------------------------------------------"
 echo "task: lauras home dir on synology"
-rsync -h -a -H -x -r -v --info=progress2 --update --delete --exclude '@eaDir*' -e ssh sebastian@192.168.1.47:/volume1/homes/laura /Volumes/wd2000/backups_synology_ds218/
+rsync -h -a -H -x -r -v --info=progress2 --update --delete --exclude '@eaDir*' -e ssh admin@192.168.1.47:/volume1/homes/laura /Volumes/wd2000/backups_synology_ds218/
 echo "-------------------------------------------------------------------------"
 echo ""
 echo ""
