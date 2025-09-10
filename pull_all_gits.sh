@@ -1,4 +1,12 @@
 #!/bin/bash
+#
+#*******************************************************************************
+# Title: pull_all_gits.sh
+# Description: pull all gits within a given parent dir
+# Author: Sebastian Sonntag
+# Date: 2025-09-10
+# License: MIT
+#*******************************************************************************
 set -o pipefail
 
 # Script to run `git pull` inside all subdirectories which are git repositories.
@@ -17,10 +25,7 @@ while [ $# -gt 0 ]; do
     esac
 done
 
-## find is not a good way to control. Additionally, this include CURRENT directory and it is unexpected.
-# find . -maxdepth 1 -type d -exec bash -c 'echo "Working on $(realpath $1)"; git reset --force; git pull' shell {} \;
-
-for dir in ./Code/*/*/; do
+for dir in /Users/sebastian/Code/*/*/; do
     echo "--- Working on \"$(realpath "${dir}")\""
     pushd "$(realpath "${dir}")" > /dev/null
         if [[ ! -d ".git" ]]; then
