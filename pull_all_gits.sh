@@ -25,7 +25,7 @@ while [ $# -gt 0 ]; do
     esac
 done
 
-for dir in /Users/sebastian/Code/*/*/; do
+for dir in ~/Code/*/*/; do
     echo "--- Working on \"$(realpath "${dir}")\""
     pushd "$(realpath "${dir}")" > /dev/null
         if [[ ! -d ".git" ]]; then
