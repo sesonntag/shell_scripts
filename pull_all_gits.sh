@@ -26,6 +26,8 @@ while [ $# -gt 0 ]; do
 done
 
 for dir in ~/Code/*/*/; do
+## find is not a good way to control. Additionally, this include CURRENT directory and it is unexpected.
+# find . -maxdepth 1 -type d -exec bash -c 'echo "Working on $(realpath $1)"; git reset --force; git pull' shell {} \;
     echo "--- Working on \"$(realpath "${dir}")\""
     pushd "$(realpath "${dir}")" > /dev/null
         if [[ ! -d ".git" ]]; then
